@@ -1,0 +1,17 @@
+{
+   "action": {
+      "default_icon": "icon.png",
+      "default_popup": "index.html"
+   },
+   "author": "KwiatekMiki",
+   "default_locale": "en",
+   "name": "__MSG_help__",
+   "description": "__MSG_pls__",
+   "icons": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "bigicon.png"
+   },
+   "manifest_version": 3,
+   "version": "4.2"
+}

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="./static/lato.css" type="text/css" rel="stylesheet">
+    <style>
+        @font-face {font-family: Segoe UI Black; src: url('./static/seguibl.ttf')}
+
+        body {
+            margin: 7px;
+            background-image: url('./static/squares.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            --colon-orange: #ff8000;
+            --barWidth: 600px;
+            width: 500px;
+        }
+
+        p {
+            color: white;
+            font-family: Lato, Arial;
+            font-size: 22px;
+            margin: 8px 0px 0px 0px;
+        }
+
+        h1, h2 {
+            color: white;
+            font-family: "Segoe UI Black", "Arial Black", "Arial";
+            font-weight: 1000;
+            font-size: 48px;
+            -webkit-text-stroke-width: 0.04em;
+            -webkit-text-stroke-color: black;
+            paint-order: stroke fill;
+            text-shadow: 0.02em 0.03em 0.03em rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            font-size: 32px;
+            margin: 0px 0px;
+        }
+
+        a {
+            color: var(--colon-orange) !important;
+            text-decoration: none;
+            -webkit-text-stroke-color: black;
+        }
+
+        .centerflex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .barBox {
+            width: var(--barWidth);
+            text-align: left;
+            margin-bottom: 42px;
+        }
+
+        .progressBar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            outline: 3px solid white;
+            border-radius: 8px;
+            filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.4));
+            margin-top: 12px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: relative;
+            height: 50px;
+        }
+
+        .barProgress {
+            position: absolute;
+            background-color: var(--colon-orange);
+            height: 100%;
+            z-index: -1;
+            left: 0px;
+        }
+
+        .barProgress.inProgress {
+            background-color: red;
+            width: 100%;
+            opacity: 15%;
+        }
+
+        .progressBar h2 {
+            text-align: center;
+        }
+
+        .progressBar h2.inProgress {
+            margin-bottom: 6px;
+        }
+
+        cy { color: yellow }
+        cg { color: lime }
+        ca { color: aqua }
+        cr { color: red }
+
+        @media screen and (max-width: 1000px) {
+            h1 { font-size: 38px; }
+            h2 { font-size: 28px; }
+            .barBox { width: 90%; max-width: var(--barWidth); }
+        }
+    </style>
+</head>
+<body>
+    <div class="centerflex">
+        <div id="main" style="display: none" class="centerflex">
+            <div class="barBox" section="scripting">
+                <h2>Scripting</h2>
+                <div class="progressBar">
+                    <div class="barProgress"></div>
+                    <h2></h2>
+                </div>
+            </div>
+    
+            <div class="barBox" section="recording">
+                <h2>Recording</h2>
+                <div class="progressBar">
+                    <div class="barProgress"></div>
+                    <h2></h2>
+                </div>
+            </div>
+    
+            <div class="barBox" section="editing">
+                <h2>Editing</h2>
+                <div class="progressBar">
+                    <div class="barProgress"></div>
+                    <h2></h2>
+                </div>
+            </div>
+    
+            <div class="barBox" id="infoBox">
+                <h2>Info</h2>
+                <p id="infoText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, aliquam maxime? Praesentium non, nesciunt aspernatur natus magni facere molestias modi reprehenderit vitae quo quis libero nihil perspiciatis harum maiores quas.</p>
+            </div>
+            
+            <div class="barBox">
+                <h2>Last Updated</h2>
+                <p id="lastUpdated">2023</p>
+            </div>
+        </div>
+
+        <hid id="noVid" style="display: none">
+            <h2>I am not working on a video right now.</h2>
+            <p id="extraInfo">Check back later!</p>
+        </hid>
+
+        <div id="loading">
+            <h2>Loading...</h2>
+        </div>
+
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
