@@ -1,20 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="theme-color" content="#ff8000">
+    <meta name="description" content="When is the next GD Colon video?">
     <meta charset="UTF-8">
-    <link href="./static/lato.css" type="text/css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="When is the next GD Colon video?">
+    <meta property="og:description" content="Monitor the live progress of Colon's next banger upload">
+    <meta property="og:type" content="website">
+    <meta name="og:image" itemprop="image" content="/static/pfp.jpg">
+    <title>When is the next GD Colon video?</title>
     <style>
-        @font-face {font-family: Segoe UI Black; src: url('./static/seguibl.ttf')}
+        @import url('/static/lato.css');
 
-        body {
-            margin: 7px;
-            background-image: url('./static/squares.jpg');
-            background-size: cover;
-            background-attachment: fixed;
+        @font-face {
+            font-family: Segoe UI Black;
+            src: url('/static/seguibl.ttf')
+        }
+
+        html {
             --colon-orange: #ff8000;
             --barWidth: 600px;
-            width: 500px;
+        }
+
+        body {
+            margin: 0px 0px;
+            background: linear-gradient(180deg, rgb(112, 28, 130) 0%, rgb(21, 0, 83) 100%);
+            background-attachment: fixed;
+        }
+
+        #page_bg {
+            z-index: -100;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('/static/25.webp');
+            background-size: 220vh;
+            background-position: bottom -60vh right;
+            background-attachment: fixed;
         }
 
         p {
@@ -24,7 +48,8 @@
             margin: 8px 0px 0px 0px;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             color: white;
             font-family: "Segoe UI Black", "Arial Black", "Arial";
             font-weight: 1000;
@@ -40,7 +65,7 @@
             margin: 0px 0px;
         }
 
-        a {
+        h1 a {
             color: var(--colon-orange) !important;
             text-decoration: none;
             -webkit-text-stroke-color: black;
@@ -96,29 +121,60 @@
             margin-bottom: 6px;
         }
 
-        cy { color: yellow }
-        cg { color: lime }
-        ca { color: aqua }
-        cr { color: red }
+        a {
+            color: aqua !important
+        }
+
+        cy {
+            color: yellow
+        }
+
+        cg {
+            color: lime
+        }
+
+        ca {
+            color: aqua
+        }
+
+        cr {
+            color: red
+        }
+
+        shh {
+            opacity: 20%;
+        }
 
         @media screen and (max-width: 1000px) {
-            h1 { font-size: 38px; }
-            h2 { font-size: 28px; }
-            .barBox { width: 90%; max-width: var(--barWidth); }
+            h1 {
+                font-size: 38px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .barBox {
+                width: 90%;
+                max-width: var(--barWidth);
+            }
         }
     </style>
 </head>
 <body>
+    <div id="page_bg"></div>
     <div class="centerflex">
+        <h1>When is the next<br><a href="https://youtube.com/@GDColon" target="_blank">GD Colon</a> video?</h1>
+        <br>
         <div id="main" style="display: none" class="centerflex">
             <div class="barBox" section="scripting">
-                <h2>Scripting</h2>
+                <h2>Writing</h2>
                 <div class="progressBar">
                     <div class="barProgress"></div>
                     <h2></h2>
                 </div>
             </div>
-    
+
             <div class="barBox" section="recording">
                 <h2>Recording</h2>
                 <div class="progressBar">
@@ -126,7 +182,7 @@
                     <h2></h2>
                 </div>
             </div>
-    
+
             <div class="barBox" section="editing">
                 <h2>Editing</h2>
                 <div class="progressBar">
@@ -134,22 +190,30 @@
                     <h2></h2>
                 </div>
             </div>
-    
+
             <div class="barBox" id="infoBox">
                 <h2>Info</h2>
-                <p id="infoText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, aliquam maxime? Praesentium non, nesciunt aspernatur natus magni facere molestias modi reprehenderit vitae quo quis libero nihil perspiciatis harum maiores quas.</p>
+                <p id="infoText"></p>
             </div>
-            
+
             <div class="barBox">
                 <h2>Last Updated</h2>
                 <p id="lastUpdated">2023</p>
             </div>
         </div>
 
-        <hid id="noVid" style="display: none">
+        <div id="noVid" style="display: none">
             <h2>I am not working on a video right now.</h2>
             <p id="extraInfo">Check back later!</p>
-        </hid>
+        </div>
+
+        <div id="yesVid" style="display: none">
+            <h2>New video!</h2>
+            <p id="extraVidInfo"></p>
+            <iframe id="videoLink" style="margin-top: 32px" width="480" height="270" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
 
         <div id="loading">
             <h2>Loading...</h2>
@@ -157,5 +221,6 @@
 
     </div>
 </body>
+<!-- i had to move this to a seperate file because... idk, don't ask me -->
 <script src="./script.js"></script>
 </html>

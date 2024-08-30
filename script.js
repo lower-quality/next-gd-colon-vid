@@ -1,21 +1,27 @@
-fetch("https://gdcolon.com/nextvideo.json").then(res => res.json()).then(data => {
+fetch("https://gdcolon.com/nextvideo.json?t=" + Date.now()).then(res => res.json()).then(data => {
+    if (data.video) { // yes video rn
+        document.getElementById("yesVid").style.removeProperty("display")
+        if (data.info) document.getElementById("extraVidInfo").innerHTML = data.info
+        let videoID = data.video.split("?")[0].split("/").at(-1).split("=").at(-1)
+        document.getElementById("videoLink").setAttribute("src", videoLink = "https://www.youtube.com/embed/" + videoID)
+    }
 
-    if (!data.active) { // no video rn
+    else if (!data.active) { // no video rn
         document.getElementById("noVid").style.removeProperty("display")
         if (data.info) document.getElementById("extraInfo").innerHTML = data.info
-     }
+    }
 
     else {
         document.getElementById("main").style.removeProperty("display")
-        addPercent("scripting", data.scripting)
-        addPercent("recording", data.recording)
-        addPercent("editing", data.editing)
+        addPercent("scripting", data.scripting || 0)
+        addPercent("recording", data.recording || 0)
+        addPercent("editing", data.editing || 0)
 
         if (data.info) document.getElementById("infoText").innerHTML = data.info
         else document.getElementById("infoBox").style.display = "none"
 
         let dateStr = new Date(data.updated).toLocaleString([], { dateStyle: "full", timeStyle: "short" })
-        let timeZone = new Date().toLocaleDateString(undefined, {day:'2-digit', timeZoneName: 'short' }).substring(4)
+        let timeZone = new Date().toLocaleDateString(undefined, { day: '2-digit', timeZoneName: 'short' }).substring(4)
         document.getElementById("lastUpdated").textContent = `${dateStr} (${timeZone})`
     }
 
