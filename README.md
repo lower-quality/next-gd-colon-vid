@@ -25,3 +25,10 @@ I have removed all references to gdcolon.com, not including the request to check
 2. Download [this .zip file](https://github.com/lower-quality/Nuxanorify/releases/download/latest/nuxanorify.zip)
 3. Make a new folder and unzip it here
 4. Click "Load Temporary Add-on..." and select any file in the folder that you just made
+
+## Privacy Policy
+<sub>Google is forcing me to write this</sub>
+
+**The extension doesn't collect data from the user**, BUT if the video is uploaded, **the extension will embed the video and Google WILL collect your data**. I can't really think of a better way to do this without Google collecting your data. [Google's privacy policy](https://policies.google.com/privacy)
+
+As I mentioned above, the extension does a request to `https://gdcolon.com/nextvideo.json` to check the next video progress. From what GD Colon said to me 1 year ago (I'll try to ask him again to make sure it's still the same), he doesn't collect any data. He also doesn't have any Privacy Policy, because, he would he need one.
