@@ -1,8 +1,8 @@
 {
-    "help": {
+    "name": {
         "message": "Postęp nowego filmu GD Colon"
     },
-    "pls": {
+    "description": {
         "message": "Łatwo monitoruj postępy GD Colona w tworzeniu nowych filmów, bez konieczności otwierania jego strony internetowej."
     }
 }

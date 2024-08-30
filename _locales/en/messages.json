@@ -1,8 +1,8 @@
 {
-    "help": {
+    "name": {
         "message": "GD Colon's Next Video tracker"
     },
-    "pls": {
+    "description": {
         "message": "Easily monitor GD Colon's progress on his new videos without having to open his website for that."
     }
 }
