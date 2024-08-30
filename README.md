@@ -5,6 +5,8 @@ I made this extension *checks last updated code date* 1 year ago because I didn'
 
 I have removed all references to gdcolon.com, not including the request to check the next video progress.
 
+![](screenshot.png)
+
 ## Download
 > [!IMPORTANT]  
 > The Chrome download link is outdated because Google has to check new versions before you can download them and there is no Firefox download because of the same thing but with Mozilla instead of Google. Untik this information is removed, please manually install the extension.
