@@ -9,11 +9,12 @@ I have removed all references to gdcolon.com, not including the request to check
 
 ## Download
 > [!IMPORTANT]  
-> The Chrome download link is outdated because Google has to check new versions before you can download them and there is no Firefox download because of the same thing but with Mozilla instead of Google. Untik this information is removed, please manually install the extension.
+> The Chrome download link is outdated because Google has to check new versions before you can download them. Until this information is removed, please manually install the extension.
 
 [
 ![](https://developer.chrome.com/static/docs/webstore/branding/image/206x58-chrome-web-bcb82d15b2486.png)
 ](https://chromewebstore.google.com/detail/nbopilpclepoieejeidnjfceehmnkjjj)
+[![](https://blog.mozilla.org/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/en-US/firefox/addon/gd-colon/)
 
 ## Manual install
 ### Chrome (and Chromium-based browsers)
