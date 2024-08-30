@@ -1,17 +1,17 @@
 {
-   "manifest_version": 3,
-   "default_locale": "en",
-   "name": "__MSG_help__",
-   "description": "__MSG_pls__",
-   "author": "KwiatekMiki",
-   "version": "4.2",
-   "icons": {
-      "16": "icon.png",
-      "32": "icon.png",
-      "48": "bigicon.png"
-   },
-   "action": {
-      "default_icon": "icon.png",
-      "default_popup": "index.html"
-   }
+    "manifest_version": 3,
+    "default_locale": "en",
+    "name": "__MSG_help__",
+    "description": "__MSG_pls__",
+    "author": "KwiatekMiki",
+    "version": "4.2",
+    "icons": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "bigicon.png"
+    },
+    "action": {
+        "default_icon": "icon.png",
+        "default_popup": "index.html"
+    }
 }
